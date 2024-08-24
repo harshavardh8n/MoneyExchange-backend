@@ -3,7 +3,7 @@ require("dotenv").config();
 // require("dotenv").config()
 
 
-mongoose.connect(process.env.MONGO_CONNECTION_KEY)
+mongoose.connect(process.env.MONGO_URL)
 
 const userSchema = mongoose.Schema({
     username: String,

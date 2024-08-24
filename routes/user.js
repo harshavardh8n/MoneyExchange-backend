@@ -21,6 +21,7 @@ const signinSchema = zod.object({
 router.post("/signup",async (req,res)=>{
 
     try {
+        console.log(" coming atleast")
         const {success} = signupSchema.safeParse(req.body);
         if(!success){
             return res.status(401).json({message:"Inputs Invalid"})

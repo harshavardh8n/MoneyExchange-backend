@@ -5,7 +5,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-
+const PORT = process.env.PORT || 8000;
 
 app.use("/api/v1",mainRouter);
 
@@ -14,4 +14,6 @@ app.get("/",(req,res)=>{
 })
 
 
-app.listen(3000)
+app.listen(PORT,()=>{
+    console.log("works at port port",PORT)
+})
